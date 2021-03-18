@@ -9,14 +9,14 @@ import { dijkstra, getShortesPath } from "../../lib/dijkstra";
 const Grid: FunctionComponent = () => {
   const [grid, setGrid] = useState<NodeType[][]>([]);
 
-  const rowTotalSize = 20;
-  const colTotalSize = 50;
+  const rowTotalSize = 25;
+  const colTotalSize = 60;
 
   const rowStartPosition = 10;
   const colStartPosition = 15;
 
   const rowFinishPosition = 10;
-  const colFinishPosition = 35;
+  const colFinishPosition = 40;
 
   const [mouseIsPressed, setMouseIsPressed] = useState<boolean>(false);
 
@@ -100,7 +100,8 @@ const Grid: FunctionComponent = () => {
 
   return (
     <>
-      <button onClick={() => visualizeDijkstra()}>Dijkstra</button>
+      <button onClick={() => visualizeDijkstra()}>Search</button>
+      <button onClick={() => window.location.reload()}>Reload</button>
       <div className={classes.Grid}>
         {grid.length &&
           grid.map((row, rowIndex) => (

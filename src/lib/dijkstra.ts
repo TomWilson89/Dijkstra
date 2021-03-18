@@ -63,7 +63,5 @@ export const getShortesPath = (finishNode: NodeType) => {
     current = current.previousNode;
   }
 
-  console.log(`shortesPath`, shortesPath);
-
   return shortesPath;
 };
